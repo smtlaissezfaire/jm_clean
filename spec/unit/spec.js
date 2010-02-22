@@ -1,10 +1,18 @@
-describe("JM", function() {
-  it("should be present", function() {
-    var text = JM.render({}, function() {
-      ul();
-    });
+describe("vendored code", function() {
+  describe("JM", function() {
+    it("should be present", function() {
+      var text = JM.render({}, function() {
+        ul();
+      });
 
-    text.should.equal("<ul></ul>");
+      text.should.equal("<ul></ul>");
+    });
+  });
+
+  describe("jslex", function() {
+    it("should be around", function() {
+      jslex.should.not.be(undefined);
+    });
   });
 });
 
