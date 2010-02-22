@@ -1,8 +1,9 @@
+describe("JM", function() {
+  it("should be present", function() {
+    var text = JM.render({}, function() {
+      ul();
+    });
 
-describe 'YourLib'
-  describe '.someMethod()'
-    it 'should do something'
-      true.should.be true
-    end
-  end
-end
+    text.should.equal("<ul></ul>");
+  });
+});
