@@ -81,6 +81,18 @@ describe("JM.Clean", function() {
           ["colon", ":"]
         ]);
       });
+
+      it("should identify a set of key value pairs separately", function() {
+        compare_arrays(JM.Clean.tokenize("foo: 'bar', baz: 'quxx'"), [
+          ["id", "foo"],
+          ["colon", ":"],
+          ["id", "'bar'"],
+          ["comma", ","],
+          ["id", "baz"],
+          ["colon", ":"],
+          ["id", "'quxx'"]
+        ]);
+      });
     });
   });
 
@@ -315,8 +327,11 @@ describe("JM.Clean", function() {
         parser.parse("ul foo:'baz'").toHTML().should.equal("<ul foo='baz'></ul>");
       });
 
-      // pending
-      it("should match multiple key value pairs", function() {});
+      it("should match multiple key value pairs", function() {
+        // pending
+        // var str = parser.parse("ul foo: 'bar', baz: 'quxx'").toHTML();
+        // str.should.equal("<ul foo='bar' baz='quxx'></ul>");
+      });
     });
   });
 });
