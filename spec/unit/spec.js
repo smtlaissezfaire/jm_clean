@@ -8,12 +8,6 @@ describe("vendored code", function() {
       text.should.equal("<ul></ul>");
     });
   });
-
-  describe("jslex", function() {
-    it("should be around", function() {
-      jslex.should.not.be(undefined);
-    });
-  });
 });
 
 describe("JM.Clean", function() {
