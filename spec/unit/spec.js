@@ -307,6 +307,14 @@ describe("JM.Clean", function() {
         parser.parse("ul foo : 'baz'").toHTML().should.equal("<ul foo='baz'></ul>");
       });
 
+      it("should match without an extra space between the key-value pair", function() {
+        parser.parse("ul foo: 'baz'").toHTML().should.equal("<ul foo='baz'></ul>");
+      });
+
+      it("should match without any spaces between the key-value pair", function() {
+        parser.parse("ul foo:'baz'").toHTML().should.equal("<ul foo='baz'></ul>");
+      });
+
       // pending
       it("should match multiple key value pairs", function() {});
     });
