@@ -1,3 +1,6 @@
 [submodule "lib/vendor/jm"]
 	path = lib/vendor/jm
 	url = git@github.com:smtlaissezfaire/jm.git
+[submodule "lib/vendor/jslex"]
+	path = lib/vendor/jslex
+	url = git://github.com/jimbojw/jslex.git
