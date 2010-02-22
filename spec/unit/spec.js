@@ -20,7 +20,7 @@ describe("JM.Clean", function() {
       });
 
       it("should find an empty array of tokens with an empty string", function() {
-        // compare_arrays(JM.Clean.tokenize(""), []);
+        compare_arrays(JM.Clean.tokenize(""), []);
       });
 
       it("should find one char as a token", function() {
@@ -76,11 +76,10 @@ describe("JM.Clean", function() {
       });
 
       it("should identify a colon after a word as a word + colon (not one word)", function() {
-        // pending
-        // compare_arrays(JM.Clean.tokenize("foo:"), [
-        //   ["id", "foo"],
-        //   ["colon", ":"]
-        // ]);
+        compare_arrays(JM.Clean.tokenize("foo:"), [
+          ["id", "foo"],
+          ["colon", ":"]
+        ]);
       });
     });
   });
